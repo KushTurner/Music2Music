@@ -1,10 +1,11 @@
 from django.urls import path
 from . import views
 
-app_name = 'mainapp'
+app_name = 'authorization'
 
 urlpatterns = [
     path('spotify-auth/', views.authSpotify),
-    path('callback/', views.callback),
-    path('', views.home, name=''),
+    path('spotify-redirect/', views.redirectSpotify),
+    path('youtube-auth/', views.authYoutube),
+    path('youtube-redirect/', views.redirectYoutube),
 ]

@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'musicAPI',
     'frontend',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
