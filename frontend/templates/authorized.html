@@ -1,13 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music2Music</title>
-</head>
-<body>
-    <h1>Authorized</h1>
-</body>
-</html>
+{% block content %}
+
+
+    <form action="{% url 'convert' %}" method="post">
+        {% csrf_token %}
+        <select name="playlistID" class="form-select" aria-label="Default select example" required>
+            {% for key, value in playlists.items %}
+            <option value="{{ key }}">{{ value }}</option>
+            {% endfor %}
+        </select>
+        
+
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Playlist Name:</span>
+            <input type="text" class="form-control" placeholder="My YouTube Playlist" name="playlist_name">
+        </div>
+
+        <input class="btn btn-dark" type="submit" value="Submit">
+
+    </form>
+  
+{% endblock %}
