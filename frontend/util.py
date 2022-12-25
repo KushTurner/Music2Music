@@ -226,11 +226,3 @@ if __name__ == "__main__":
     # Testing
     testlist = ['Hey Now YoungBoy Never Broke Again', '50s Headie One', 'Alone Burna Boy', 'Just Wanna Rock Lil Uzi Vert', 'All In YoungBoy Never Broke Again', "Still Trappin' Lil Durk", 'Dis & That YoungBoy Never Broke Again', 'Middle of the Ocean Drake', 'Pussy & Millions (feat. Travis Scott) Drake', 'Treacherous Twins Drake']
     testlist2 = ['F5qe28eelAU', '13VbPLUhcgU', 'S8qGmBtXZV8', 'UhbixyxgsiU', '6MCSr65d9Xc', 'cDde7QlKCX0', 'QepL7wh-E80', 'IEueorPNpT0', '8LpAtRIakkk', 'jCtsnNpCDo0']
-    # find_songs(testlist, "ya29.a0AX9GBdVJkp7rAFWY8buKDzx--WiBR8M_nxJB3anBy5mT7_35CAuFOl9UgDWTXiJc_ymkkf9RBwLIl88TrGn4DKHi4HDTTLO95X1SlU36MS0N2usD_UK83-bXnTyXucAYPVCLDGtY6dBIBou5yAhXAbFCHmN0aCgYKAR8SARISFQHUCsbCaGmb8IvN1JDVs9y4Mu9l2A0163")
-    # populate_playlist(testlist2, "PLy4yrzjwxIfZboHPYlMC_D8VA9rCUfKiP", "ya29.a0AX9GBdWfJFEBNedgrkkuICploAUGieH87l2ANI6mrUA1sYw07qNGV1Xw6YfXTqjQPFhRWZ4mrjeY156s-5JNRawULzgyq45M-n2nIszuzH-Kplq9Ts0Gz5ZKofo91GkYDqjfKpoHrXpqP8CswVF0YIuff233aCgYKAesSARISFQHUCsbCvrGoXNd7FV9sxbUsR-YGQg0sxbUsR-YGQg0163")
-    # populate_playlist(testlist, "PLy4yrzjwxIfZboHPYlMC_D8VA9rCUfKiP", "ya29.a0AX9GBdWfJFEBNedgrkkuICploAUGieH87l2ANI6mrUA1sYw07qNGV1Xw6YfXTqjQPFhRWZ4mrjeY156s-5JNRawULzgyq45M-n2nIszuzH-Kplq9Ts0Gz5ZKofo91GkYDqjfKpoHrXpqP8CswVF0YIuff233aCgYKAesSARISFQHUCsbCvrGoXNd7FV9sxbUsR-YGQg0sxbUsR-YGQg0163")
-    
-    create_playlist("testing", "ya29.a0AX9GBdX3ElyysmJNKDOr2HQx_lHExneitogapo84qguoXmcv_7Ncw9_yK2sr99c1LykuEuYhSj427K3eu0kl-g07TEouNT2n6iGdWbTa2wcTE8MccdqUv2EvG57lpyzkwJRgsVeu1Ma-zfLx2pHaqfa7Y_OxaCgYKAdQSARISFQHUCsbCA7RpJyA_o6DWrXiOa8o6Mw0163")
-
-    # get_playlists("BQAlsaNJentVDPWNmBCFWtlbiLFPOQHc96GA1D2sQF9M5VKLryMFLPnTGdjuB5yvhGI28FjnLpQO_mcDChIwb1RTTCCTcUJdcXE32ixNzPkN6Kmy7HXQgxhCfMWTh0k0te3yR_mcE3KwvFC_zHdu4nnVPPa2LtIYM4KNezZgDOq-Ew_kaSZT-9VqFozh9mWVLW7n3cc8k_Txkqz5NMyjOVSLQMlJQKgPTN2pOwLW8vXtg-GsY9boMZ9hxaGrWHZm1atONA2PRZ1RTaM83qMG")
-    # print(search_songs(testlist, "ya29.a0AX9GBdW_iqx0HqkCTbaWMJ_wEm49KnfVl-zEHZF80ZkTCSv6d-37IknxsPy17DpYm4pyzDkPtk6o7TKlIa-tjwUorv-QBn-lEm4fd3Zt-MfjAEIln_HXj63vtq7lIqT_My1L_Vbx7zProtXGSpADYbYgqt3SaCgYKAVASARISFQHUCsbCRlvMclDinQpq1W5WBuHwEQ0163"))
