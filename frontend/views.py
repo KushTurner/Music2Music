@@ -18,38 +18,56 @@ def home(request):
     # If both access tokens have been taken...
     if request.session['SpotifyToken'] != None and request.session['YouTubeToken'] != None:
         
-        # Do something
+        # Redirect to convert page
         return redirect('convert')
-       
     else:
+        # Stay on homepage
         return render(request, 'index.html', {})
 
 def convert(request):
+
+    # Save Spotify access token in a variable
     spotifytoken = request.session['SpotifyToken']
 
+    # Save YouTube access token in a variable
     youtubetoken = request.session['YouTubeToken']
 
+    # Request selected spotify playlist
     spotify_playlists = get_playlists(spotifytoken)
 
+    # If getting the playlist causes an error, restart session
     if spotify_playlists == "expired":
         request.session['SpotifyToken'] = None
         request.session['YouTubeToken'] = None
         return redirect('home')
     
+    # Context needed to be passed into front end to be displayed
     context = {
             "playlists": spotify_playlists
         }
     
+    # Check if user has submitted the form
     if request.method == "POST":
         
+        # Get the playlist ID from the selected playlist
         spotify_playlistID = request.POST['playlistID']
+
+        # Get the playlist name the user wants for the YouTube playlist
         playlist_name = request.POST['playlist_name']
+
+        # Create the YouTube playlist with the playlist name
         youtube_playlistID = create_playlist(playlist_name, youtubetoken)
+
+        # Creates a list of song titles to be used to search for with YouTube's API
         songtitles = titles_of_songs(spotify_playlistID, spotifytoken)
+
+        # Creates a list of song ID's which have been found on YouTube
         youtubesongs = search_songs(songtitles, youtubetoken)
+
+        # Iterates through the song ID's and adds them individually to the YouTube playlist 
         populate_playlist(youtubesongs, youtube_playlistID, youtubetoken)
         
-        redirect("/")
+        return redirect(f"https://www.youtube.com/playlist?list={youtube_playlistID}")
     
     return render(request, 'authorized.html', context)
 

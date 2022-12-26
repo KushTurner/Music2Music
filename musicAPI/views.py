@@ -12,8 +12,6 @@ import requests
 # Load keys hidden in .env
 load_dotenv()
 
-
-
 # Create your views here.
 
 # Authentication for Spotify
@@ -55,10 +53,9 @@ def redirectSpotify(request):
     refresh_token = response.get('refresh_token')
     expires_in = response.get('expires_in')
 
-    # Add access token to session database to be used when using API
+    # Add access token to session to be used when using API
     if access_token:
         request.session['SpotifyToken'] = access_token
-        print("Spotify Token: " + request.session['SpotifyToken'])
 
     # Redirect back to homepage
     return redirect('/')
@@ -114,7 +111,6 @@ def redirectYoutube(request):
     # Add access token to session database to be used when using API
     if access_token:
         request.session['YouTubeToken'] = access_token
-        print("YouTube Token: " + request.session['YouTubeToken'])
     
     # Redirects user back to homepage
     return redirect('/')    
