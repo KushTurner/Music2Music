@@ -1,7 +1,79 @@
-.asd {
+body {
+    background-color: #18191A;
+}
+
+.navbar {
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+    background-color: #242526;
+}
+
+.navbar-title {
+    color: #E4E6EB;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.description {
     text-align: center;
+    color: #E4E6EB;
+    padding-top: 20px;
 }
 
 .buttons {
     text-align: center;
+}
+
+#youtube-auth {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+#spotify-auth {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-right: 58px;
+    padding-left: 58px;
+}
+
+.playlist-form {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.submit-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #E4E6EB;
+}
+
+.reset-button {
+    display: inline-block;
+    margin-top: 2px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+    color: #E4E6EB;
+}
+
+.text-color {
+    color: #E4E6EB;
+}
+
+.redirect-button {
+    position: absolute;
+    left: 41.5%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 15px;
+    color: #E4E6EB;
+}
+
+.created {
+    text-align: center;
+    margin-top: 15px;
 }

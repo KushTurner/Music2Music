@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div>
+    <h2 class="created text-color">Playlist created:</h2>
+    <a type="button" class="btn btn-dark btn-lg redirect-button" href="https://www.youtube.com/playlist?list={{ playlistID }}">Go To Playlist</a>
+</div>
+{% endblock %}

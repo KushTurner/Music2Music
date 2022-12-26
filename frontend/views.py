@@ -58,6 +58,8 @@ def convert(request):
         # Create the YouTube playlist with the playlist name
         youtube_playlistID = create_playlist(playlist_name, youtubetoken)
 
+        request.session["youtube_playlistID"] = youtube_playlistID
+
         # Creates a list of song titles to be used to search for with YouTube's API
         songtitles = titles_of_songs(spotify_playlistID, spotifytoken)
 
@@ -67,7 +69,7 @@ def convert(request):
         # Iterates through the song ID's and adds them individually to the YouTube playlist 
         populate_playlist(youtubesongs, youtube_playlistID, youtubetoken)
         
-        return redirect(f"https://www.youtube.com/playlist?list={youtube_playlistID}")
+        return redirect('created')
     
     return render(request, 'authorized.html', context)
 
@@ -75,3 +77,12 @@ def reset(request):
     request.session['SpotifyToken'] = None
     request.session['YouTubeToken'] = None
     return redirect('home')
+
+def created(request):
+    youtube_playlistID = request.session["youtube_playlistID"]
+
+    context = {
+        "playlistID": youtube_playlistID
+    }
+
+    return render(request, 'created.html', context)

@@ -3,10 +3,11 @@
 
 
 {% block content %}
-<h1 class="asd">Connect Spotify and YouTube</h1>
+<h1 class="description text-color">Connect Spotify and YouTube</h1>
 <div class="buttons">
-    <a type="button" class="btn btn-dark" id="youtube-auth" href="http://127.0.0.1:8000/auth/youtube-auth">Connect YouTube</a>
-    <a type="button" class="btn btn-dark" id="spotify-auth" href="http://127.0.0.1:8000/auth/spotify-auth">Connect Spotify</a>
+    <a type="button" class="btn btn-dark btn-lg btn-block text-color" id="youtube-auth" href="http://127.0.0.1:8000/auth/youtube-auth">Connect YouTube</a><br>
+    <a type="button" class="btn btn-dark btn-lg btn-block text-color" id="spotify-auth" href="http://127.0.0.1:8000/auth/spotify-auth">Connect Spotify</a>
 </div>
-<script src="{% static '/js/script.js' %}" type="text/javascript"></script>  
+<script src="{% static '/js/script.js' %}" type="text/javascript"></script>
+
 {% endblock %}
