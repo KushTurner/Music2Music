@@ -1,5 +1,5 @@
 # Music2Music
-Converts a playlist from Spotify to Apple Music
+Converts a playlist from Spotify to YouTube
 
 Quota 10,000 per day
 
